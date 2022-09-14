@@ -11,8 +11,6 @@ def db_init_users():
     conn_i = sqlite3.connect('db_users.sqlite')
     c_val = conn_i.cursor()
     c_val.execute("CREATE TABLE users (username text, password text, failures int, mfa_enabled int, mfa_secret text)")
-    for u,p in users:
-        c_val.execute("INSERT INTO users (username, password, failures, mfa_enabled, mfa_secret) VALUES ('%s', '%s', '%d', '%d', '%s')" %(u, p, 0, 0, ''))
     conn_i.commit()
     conn_i.close()
 
