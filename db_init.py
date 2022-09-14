@@ -37,13 +37,8 @@ if __name__ == '__main__':
 
     try:
         os.remove('db_users.sqlite')
-    except FileNotFoundError:
-        print('File Not found error')
 
     try:
         os.remove('db_posts.sqlite')
-    except FileNotFoundError:
-        print('File Not found error')
-
     db_init_users()
     db_init_posts()
