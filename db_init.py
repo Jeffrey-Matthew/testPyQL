@@ -9,7 +9,7 @@ def db_init_posts():
     c = conn.cursor()
     c.execute("CREATE TABLE posts (date date, username text, text text)")
     for u,p in users:
-        new_val = "INSERT INTO users (username, password, failures, mfa_enabled, mfa_secret) VALUES ('%s', '%s', '%d', '%d', '%s')" %(u, p, 0, 0, '')
+        new_val = "INSERT INTO users (username, password, failures, mfa_enabled, mfa_secret) VALUES ('%s', '%s', '%d', '%d', '%s')" 
         c.execute(new_val)
     conn.commit()
     conn.close()
