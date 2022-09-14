@@ -33,6 +33,6 @@ def db_init_posts():
     conn.close()
 
 
-if __name__ == '__main__'
+if __name__ == '__main__':
     db_init_users()
     db_init_posts()
