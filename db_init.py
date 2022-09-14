@@ -34,16 +34,5 @@ def db_init_posts():
 
 
 if __name__ == '__main__':
-
-    try:
-        os.remove('db_users.sqlite')
-    except FileNotFoundError:
-        pass
-
-    try:
-        os.remove('db_posts.sqlite')
-    except FileNotFoundError:
-        pass
-
     db_init_users()
     db_init_posts()
